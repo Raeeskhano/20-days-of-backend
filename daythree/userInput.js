@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     res.write("</body>");
     res.write("</html>");
     return res.end();
-  } else if (req.url === "/submit-details" && req.method === "post") {
+  } else if (req.url === "/submit-details" && req.method === "POST") {
     fs.writeFileSync("user.text", "Raees khan");
     res.statusCode = 302; //redirect status code
     res.setHeader("Location", "/");
@@ -31,11 +31,10 @@ const server = http.createServer((req, res) => {
   res.write("<html>");
   res.write("<head><title>Homepage</title></head>");
   res.write("<body>");
-  res.write("<h1>folloe me on github</h1>");
+  res.write("<h1>follow me on github</h1>");
   res.write("</body>");
   res.write("</html>");
 });
-
 const port = 3000;
 
 server.listen(port, () => {
