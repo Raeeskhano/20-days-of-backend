@@ -1,0 +1,29 @@
+<%- include('partials/Head') %>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+    <main class="my-10 mx-20 py-10 shadow-xl text-center">
+      <h1 class="pt-[15px] text-4xl font-semibold">
+        Here are our registered Homes:
+      </h1>
+    
+     <section class="my-10 mx-20 py-10 shadow-xl text-center flex justify-center gap-2 flex-wrap">
+      <% registerHome.forEach(home => { console.log(home.houseName.houseName)%>
+        <div class="text-left p-4 text-emerald-950 w-[200px] h-auto shadow-lg">
+          <div>
+            <p><%= home.houseName.image %></p>
+          </div>
+          <div>
+            <h2><%= home.houseName.houseName %></h2>
+            <p><%= home.houseName.price %></p>
+          </div>
+          <div>
+            <p><%= home.houseName.location %></p>
+            <p><%= home.houseName.rating %></p>
+          </div>
+        </div>
+      <% }) %>
+     </section>
+    </main>
+  </body>
+</html>
