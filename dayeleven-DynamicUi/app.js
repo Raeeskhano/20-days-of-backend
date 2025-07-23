@@ -27,7 +27,10 @@ app.use(hostRouter);
 
 // 404 handler
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+  res.status(404).render("404", {
+    pagetitle: "page not found",
+    currentPage: "404",
+  });
 });
 
 const port = 3000;

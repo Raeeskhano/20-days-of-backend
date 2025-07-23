@@ -8,6 +8,7 @@ userrouter.get("/", (req, res, next) => {
   res.render("addHome", {
     registerHome: registerHome,
     pagetitle: "airbnb Home",
+    currentPage: "addHome",
   });
 });
 

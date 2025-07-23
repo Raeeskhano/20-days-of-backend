@@ -14,12 +14,12 @@
             <p><%= home.houseName.image %></p>
           </div>
           <div>
-            <h2><%= home.houseName.houseName %></h2>
-            <p><%= home.houseName.price %></p>
+            <h2>houseName: <span class="font-bold"><%= home.houseName.houseName %></span></h2>
+            <p>Price: <%= home.houseName.price %> <span class="text-red-500">per night</span></p>
           </div>
-          <div>
-            <p><%= home.houseName.location %></p>
-            <p><%= home.houseName.rating %></p>
+          <div class="flex justify-between">
+            <p class="font-bold"><%= home.houseName.location %></p>
+            <p class="font-bold text-emerald-950"><%= home.houseName.rating %>⭐</p>
           </div>
         </div>
       <% }) %>

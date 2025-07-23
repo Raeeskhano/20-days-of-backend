@@ -7,17 +7,22 @@ const registerHome = [];
 // GET /add-home route
 hostRouter.get("/add-home", (req, res, next) => {
   console.log(req.url, req.method);
-  res.sendFile(path.join(__dirname, "..", "views", "RegisterHome.html"));
+  res.render("RegisterHome", {
+    registerHome: registerHome,
+    pagetitle: "Register Home",
+    currentPage: "add-Home",
+  });
 });
 
 // POST /add-home route
 hostRouter.post("/add-home", (req, res, next) => {
-  console.log(
-    "home registration successful for:",
-    req.body,
-  );
+  console.log("home registration successful for:", req.body);
   registerHome.push({ houseName: req.body });
-  res.sendFile(path.join(__dirname, "..", "views", "homeAdded.html"));
+  res.render("homeAdded", {
+    registerHome: registerHome,
+    pagetitle: "Home",
+    currentPage: "homeAdded",
+  });
 });
 
 module.exports = {

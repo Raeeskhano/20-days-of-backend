@@ -1,7 +1,15 @@
 <header
   class="bg-emerald-950 w-[100%] h-[80px] p-6 flex justify-start items-center gap-2"
 >
-  <a class="text-white p-2" href="/add-home">Add home</a>
+  <a
+    class="<%= currentPage === 'add-home' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/add-home"
+    >Add home</a
+  >
 
-  <a class="text-white p-2" href="/">GoTo home</a>
+  <a
+    class="<%= currentPage === 'Home' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/"
+    >GoTo home</a
+  >
 </header>
