@@ -1,0 +1,39 @@
+<header
+  class="bg-emerald-950 w-[100%] h-[80px] p-6 flex justify-start items-center gap-2"
+>
+  <a
+    class="<%= currentPage === 'add-home' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/add-home"
+    >Add home</a
+  >
+
+  <a
+    class="<%= currentPage === 'Home' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/"
+    >GoTo home</a
+  >
+
+  <a
+    class="<%= currentPage === 'favorite' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/favorite"
+    >favorite</a
+  >
+
+  <a
+    class="<%= currentPage === 'bookings' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/bookings"
+    >Bookings</a
+  >
+
+  <a
+    class="<%= currentPage === 'host-addHome-list' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/host-addhome-list"
+    >Host Homes</a
+  >
+
+  <a
+    class="<%= currentPage === 'index' ? 'bg-emerald-800' : 'hover:bg-emerald-800' %> text-white px-2 rounded transition duration-300"
+    href="/index"
+    >index</a
+  >
+</header>

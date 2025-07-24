@@ -1,0 +1,22 @@
+<%- include('../partials/Head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <div class="px-4 py-2 text-center shadow-xl m-6">
+      <h1 class="text-emerald-950 text-2xl font-bold mb-4">Register your home here...</h1>
+      <form action="/add-home" method="POST" class="flex flex-col gap-2 w-[50%] mx-auto text-center">
+        <input type="text" name="houseName" placeholder="enter house name" class="outline-1 rounded px-2 outline-emerald-800" />
+        <input type="text" name="price" placeholder="price per night of Home" class="outline-1 rounded px-2 outline-emerald-800" />
+        <input
+          type="text"
+          name="location"
+          placeholder="enter your house location"
+          class="outline-1 rounded px-2 outline-emerald-800"
+        />
+        <input type="range" name="rating" min="1" max="5" />
+        <input type="file" name="image" class="outline-1 rounded px-2 outline-emerald-800"/>
+        <input type="submit" class="outline-1 rounded px-2 outline-emerald-800"/>
+      </form>
+    </div>
+  </body>
+</html>

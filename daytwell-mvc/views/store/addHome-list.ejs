@@ -1,0 +1,32 @@
+<%- include('../partials/Head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <main class="my-10 mx-20 py-10 shadow-xl text-center">
+      <h1 class="pt-[15px] text-4xl font-semibold">
+        Here are our registered Homes:
+      </h1>
+    
+     <section class="my-10 mx-20 py-10 shadow-xl text-center flex justify-center gap-2 flex-wrap">
+      <% registerHome.forEach(home => { %>
+        <div class="text-left p-4 text-emerald-950 w-[200px] h-auto shadow-lg">
+          <div>
+            <p><%= home.image %></p>
+          </div>
+          <div>
+            <h2>houseName: <span class="font-bold"><%= home.houseName %></span></h2>
+            <p>Price: <%= home.price %> <span class="text-red-500">per night</span></p>
+          </div>
+          <div class="flex justify-between">
+            <p class="font-bold"><%= home.location %></p>
+            <p class="font-bold text-emerald-950"><%= home.rating %>⭐</p>
+          </div>
+          <button class="bg-emerald-950 text-white px-1 rounded mt-2 hover:bg-emerald-900 transition duration-300 cursor-pointer">
+            Book Now
+          </button>
+        </div>
+      <% }) %>
+     </section>
+    </main>
+  </body>
+</html>
