@@ -21,9 +21,13 @@
             <p class="font-bold"><%= home.location %></p>
             <p class="font-bold text-emerald-950"><%= home.rating %>⭐</p>
           </div>
-          <button class="bg-emerald-950 text-white px-1 rounded mt-2 hover:bg-emerald-900 transition duration-300 cursor-pointer">
-            Book Now
-          </button>
+
+          <div class="flex justify-between">
+            <a href="/home/<%= home.id %>" class="bg-blue-400 text-emerald-950 px-1 rounded mt-2 hover:bg-blue-300 transition duration-300 cursor-pointer">Details</a>
+             <button class="bg-emerald-950 text-white px-1 rounded mt-2 hover:bg-emerald-900 transition duration-300 cursor-pointer">
+               Book Now
+             </button>
+          </div>
         </div>
       <% }) %>
      </section>

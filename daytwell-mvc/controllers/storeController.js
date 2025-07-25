@@ -49,3 +49,20 @@ exports.getAddHomeslist = (req, res, next) => {
     })
   );
 };
+
+exports.getHomeDetails = (req, res, next) => {
+  const homeId = req.params.homeId;
+  Home.findById(homeId, (home) => {
+    if (!home) {
+      console.log("home not found");
+      res.redirect("/homes");
+    } else {
+      console.log("Home details found:", home);
+      res.render("store/home-detail", {
+        home: home,
+        pagetitle: "Home detail",
+        currentPage: "Home",
+      });
+    }
+  });
+};
