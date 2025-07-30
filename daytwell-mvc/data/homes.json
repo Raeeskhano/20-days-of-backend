@@ -1,1 +1,66 @@
-[{"id":"1","houseName":"engr Raees house","price":"13k","location":"qaziabad","rating":"4","image":""},{"id":"2","houseName":"engr Raees house","price":"13k","location":"qaziabad","rating":"4","image":""},{"id":"3","houseName":"engr Raees house","price":"13k","location":"qaziabad","rating":"2","image":""},{"id":"4","houseName":"engr Raees house","price":"10k","location":"Osmanabad","rating":"5","image":""},{"id":"5","houseName":"engr Raees house","price":"10k","location":"Osmanabad","rating":"5","image":""},{"id":"6","houseName":"engr Raees house","price":"10k","location":"Osmanabad","rating":"3","image":""},{"houseName":"hamdan house","price":"9999","location":"jannaabad","rating":"5","image":"","id":"0.7362862064159925"},{"houseName":"Khan House","price":"56999","location":"jannaabad","rating":"3","image":"","id":"0.9606806371972392"}]
+[
+  {
+    "id": "1",
+    "houseName": "engr Raees house",
+    "price": "13k",
+    "location": "qaziabad",
+    "rating": "4",
+    "image": "/images/1.webp"
+  },
+  {
+    "id": "2",
+    "houseName": "engr Raees house",
+    "price": "13k",
+    "location": "qaziabad",
+    "rating": "4",
+    "image": "/images/2.webp"
+  },
+  {
+    "id": "3",
+    "houseName": "engr Raees house",
+    "price": "13k",
+    "location": "qaziabad",
+    "rating": "2",
+    "image": "/images/3.webp"
+  },
+  {
+    "id": "4",
+    "houseName": "engr Raees house",
+    "price": "10k",
+    "location": "Osmanabad",
+    "rating": "5",
+    "image": "/images/4.webp"
+  },
+  {
+    "id": "5",
+    "houseName": "engr Raees house",
+    "price": "10k",
+    "location": "Osmanabad",
+    "rating": "5",
+    "image": "/images/5.webp"
+  },
+  {
+    "id": "6",
+    "houseName": "engr Raees house",
+    "price": "10k",
+    "location": "Osmanabad",
+    "rating": "3",
+    "image": "/images/6.webp"
+  },
+  {
+    "houseName": "hamdan house",
+    "price": "9999",
+    "location": "jannaabad",
+    "rating": "5",
+    "image": "/images/7.webp",
+    "id": "0.7362862064159925"
+  },
+  {
+    "houseName": "Khan House",
+    "price": "56999",
+    "location": "jannaabad",
+    "rating": "3",
+    "image": "/images/1.webp",
+    "id": "0.9606806371972392"
+  }
+]
