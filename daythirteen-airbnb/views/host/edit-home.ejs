@@ -1,0 +1,23 @@
+<%- include('../partials/Head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <div class="px-4 py-2 text-center shadow-xl m-6">
+      <h1 class="text-emerald-950 text-2xl font-bold mb-4"><%= editing? "Edit" : "Register"%> your home here...</h1>
+      <form action="/host/<%= editing ? "edit-home" : "add-home"%>" method="POST" class="flex flex-col gap-2 w-[50%] mx-auto text-center">
+        <input type="text" name="houseName" placeholder="enter house name" value="<%= editing ? "home.houseName" : "" %>" class="outline-1 rounded px-2 outline-emerald-800" />
+        <input type="text" name="price" placeholder="price per night of House" value="<%= editing ? "home.price" : "" %>" class="outline-1 rounded px-2 outline-emerald-800" />
+        <input
+          type="text"
+          name="location"
+          placeholder="enter your house location"
+          value="<%= editing ? "home.location" : "" %>"
+          class="outline-1 rounded px-2 outline-emerald-800"
+        />
+        <input type="text" name="rating" placeholder="Rate the house out of 5" value="<%= editing ? "home.rating" : "" %>" class="outline-1 rounded px-2 outline-emerald-800"/>
+        <input type="url" name="imageurl" placeholder="paste the picture's url here" class="outline-1 rounded px-2 outline-emerald-800"/>
+        <input type="submit" value="<%= editing? "Update Home" : "Add Home"%>" class="outline-1 rounded px-2 outline-emerald-800"/>
+      </form>
+    </div>
+  </body>
+</html>
