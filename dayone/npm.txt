@@ -1,0 +1,25 @@
+npm- node pakage manager
+npm basically provides different pakages which are needed for our project.
+
+=> node.js core main jo atta hain usko module kehty hain
+=> npm se jo download karty hain wo hota hain pakage
+
+installing and uninstalling:
+installing-> npm i pakageName
+uninstalling-> npm uninstall pakageName
+installing specific version-> npm i pakagename@3.0.9
+
+dependencies-> pakages and pakeges ka dependencies
+devdependencies-> aisa pakage jo srif development main kam ayga but jab hum
+app ko deploy karengy tab hum is pakages ko use nhi karengy.
+like; > npm i nodemon --save-dev
+
+script:
+in pakage.json we mostly use >npm start and >npm run customScript, so start and test are basically comes with node installation but if we have to create our customScript in so we can use it like >npm run chacha.
+"scripts":{
+    "start": "node app.js",
+    "test": "echo\"Error: no test specified\" && exit 1",
+    "chacha": "echo \" hello chacha \""
+}
+
+
