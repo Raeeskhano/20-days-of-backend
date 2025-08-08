@@ -1,0 +1,33 @@
+✅Introductioin to Express.js:
+its a Framwork, and npm pakage.
+it manages everything from receiving the request and giving the response.
+
+✅Setting-up a basic Express App:
+const express = require("express");
+
+const app = express();
+
+✅Routing: navigatioin to different pages eg-> /, /profile etc
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
+app.get("/profile", (req, res) => {
+  res.send("name: Raees khan");
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`server is running on http://localhost:${port}`);
+});
+
+✅middleware:
+jab bhi server request accept karta hain waha se route ke beech pahunchne tak agar app us request ko beech me rokte ho and kuch perform karte ho, to ye element middleware kehlata hain.
+
+accept req--> middleware- to identify user --> route
+
+✅Req and res handling:
+
+frontend(browser)(req) --> backend(res)--> frontend(recieve res)
+
+✅Handling Form Data:
