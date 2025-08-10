@@ -1,0 +1,23 @@
+backend Servers--> App server(manages routes & accept reqs) and DataBase server(storing data and providing to app server)
+
+Data storage: in file ❌, in database ✅
+
+Tyes of DataBase--> SQL | noSQL
+SQL--> storing data in tabular form
+noSQL--> stroing sata in objects
+
+noSQL -> MongoDb;
+mongodb is a database which is based on noSQL.
+
+Terminologies;
+Collections, documents, schemas, keys, models.
+
+database->collections->document-> 
+
+
+-----------------------------------------------
+CODE                    DataBase
+-----------------------------------------------
+mongoose.connect ->     database create
+model create     ->     collection
+CREATE code      ->     document
