@@ -2,6 +2,8 @@
 its a Framwork, and npm pakage.
 it manages everything from receiving the request and giving the response.
 
+--> install > npm i express
+
 ✅Setting-up a basic Express App:
 const express = require("express");
 
@@ -22,12 +24,19 @@ app.listen(port, () => {
 });
 
 ✅middleware:
-jab bhi server request accept karta hain waha se route ke beech pahunchne tak agar app us request ko beech me rokte ho and kuch perform karte ho, to ye element middleware kehlata hain.
+jab bhi server request accept karta hain waha se route ke beech pahunchne tak agar app us request ko beach me rokte ho and kuch perform karte ho, to ye element middleware kehlata hain.
 
 accept req--> middleware- to identify user --> route
 
+eg. app.use() //its used for middlewares it take callback fnx with req, res, and next parameters
+
 ✅Req and res handling:
 
-frontend(browser)(req) --> backend(res)--> frontend(recieve res)
+frontend(browser)(req-->like search url) --> backend(recieve req & send res)--> frontend(recieve res)
 
 ✅Handling Form Data:
+the form data which we are sending from frontend are not received by backend as plain text we send, it received in buffer / unreadable formate, so to receive data as plain text we use the following lines;
+
+→app.use(express.json()); //this makes json data readable in backend.
+→app.use(express.urlencoded({extended:true})); //this makes the urlencoded data readable in backend.
+

@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const app = express();
 
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //it tells the backend that we are using ejs file for Uis
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

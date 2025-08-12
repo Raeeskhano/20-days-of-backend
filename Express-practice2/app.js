@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json()); //it makes the json date readable on server
 app.use(express.urlencoded({ extended: true })); // it makes the urlencoded data readable on server
-app.use(express.static(path.join(__dirname, "public"))); // express.static--> used for static files like css, images etc, and path.join joins the current path by (__dirname, "public") with public folder.
+app.use(express.static(path.join(__dirname, "public"))); // express.static--> used for static files to use like css, images etc, and path.join--> joins the current directory path by (__dirname, "public") with public folder.
 
 app.set("view engine", "ejs"); // it is used to set ejs file for rendering
 
@@ -24,4 +24,4 @@ app.get("/author/:username/:age", (req, res) => {
 
 app.listen(3000, () => {
   console.log("server is running on");
-}); 
+});

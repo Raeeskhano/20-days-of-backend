@@ -20,6 +20,12 @@ app.get("/create", async (req, res) => {
   res.send(createduser);
 });
 
+//Read-->find
+app.get("/read", async (req, res) => {
+  const users = await userModal.find({ username: "raeeskhani" });
+  res.send(users);
+});
+
 //update
 app.get("/update", async (req, res) => {
   const updateduser = await userModal.findOneAndUpdate(
@@ -28,12 +34,6 @@ app.get("/update", async (req, res) => {
     { new: true }
   );
   res.send(updateduser);
-});
-
-//Read-->find
-app.get("/read", async (req, res) => {
-  const users = await userModal.find({ username: "raeeskhani" });
-  res.send(users);
 });
 
 //Delete

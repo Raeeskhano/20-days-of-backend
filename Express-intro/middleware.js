@@ -3,8 +3,10 @@ const app = express();
 
 app.use((req, res, next) => {
   console.log("middleware chala");
-  next();
+  next(); //it is used when we want to execute other middlewares as well and then goto route
 });
+
+app.use((req, res, next) => {});
 
 app.use((req, res, next) => {
   console.log("middleware chala second time");
