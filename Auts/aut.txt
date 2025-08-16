@@ -1,0 +1,61 @@
+✅Authentications & Authorization:
+user ko profile dene sai pehle ye check karna hota hain ke user hain kaun.
+eg; username = raeeskhano, password = khan123; if it exist in our database then we will give access them, this is called authentication.
+
+and Authorization is like your are authorize or not to perform some tasks which are only allowed to be execute by the admin.
+
+
+server har baar bhool jata hain ki app kaun ho, ab kyunki server bhol jata hain ke app kon hu to har baar wo har kaam k liye apse puchhega aap kaun hu. 
+
+this is the problem❌ so, here is the concept of cookies and sessions. to solve this problem
+
+✅Cookies:
+jab hum browser sai server pai request karty hain to server kehta hain app kon ho, phir hummy batana parta hain username and password sai, if it correct too server hummy access dai daita hain, and saath main aak string bhi response main send karta hain, taki agly bhar request pai server quickly identify kary k ye kon hain, to jo string gernerate hoti hain or har bhar request k sath chepak k server k pass jaty hain issy cookies kehty hain
+
+✅sessions:
+the event between login and logout.
+
+
+topic to cover next;
+1) cookies kaisy set karty hain & read karty hain
+>npm i cookie-parser
+
+app.get("/", (req, res) => {
+  res.cookie("name", "raees"); //setting cookkies
+  res.send("done");
+});
+
+2) bcrypt kaise use karte hain for password encryption and decryption 
+>npm i bcrypt
+
+✅how to hash password:  --> encryption
+goto npmjs and search for bcrypt and scroll down you will find that;
+
+bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(myPlaintextPassword, salt, function(err, hash) {
+        // Store hash in your password DB.
+    });
+});
+
+✅now --> decryption;
+pass = Raeeskhan123
+hash pass = $2b$10$X0DUrtl3G94VvO8ZjDv4zeMm8rPHIJcNDI6Z7sxaBitOVu7XznNKi
+
+bcrypt.compare(myPlaintextPassword, hash, function(err, result) {
+    // result == true
+});
+
+bcrypt.compare(someOtherPlaintextPassword, hash, function(err, result) {
+    // result == false
+});
+
+
+3) JWT kya hain and JWT mein data kaise store karein and baahar nikaalein.
+basically JWT teen hisso sai banta hain
+installation: >npm i jsonwebtoken
+
+ --> open jwt.io website
+ and then find nodejs in libraries--> open github repo and read
+ 
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
