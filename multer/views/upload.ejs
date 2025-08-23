@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full min-h-screen bg-zinc-900 p-10 text-white">
+      <h1 class="text-2xl tracking-tighter mb-4">Upload Your Profile</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input
+          class="px-3 py-2 outline-none border-2 border-zinc-700 rounded-md"
+          type="file"
+          placeholder="Upload"
+          name="image"
+        />
+        <input
+          class="px-3 py-2 bg-blue-400 rounded-md"
+          type="submit"
+          value="Upload Profile"
+        />
+      </form>
+    </div>
+  </body>
+</html>

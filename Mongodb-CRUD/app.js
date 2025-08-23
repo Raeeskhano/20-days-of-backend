@@ -14,10 +14,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/read", async (req, res) => {
-  let allUsers = await usermodel.find();
-  res.render("read", { users: allUsers });
-});
+//create
 
 app.post("/create", async (req, res) => {
   let { name, email, image } = req.body;
@@ -30,15 +27,14 @@ app.post("/create", async (req, res) => {
   res.redirect("/read");
 });
 
-app.get("/delete/:id", async (req, res) => {
-  await usermodel.findOneAndDelete({ _id: req.params.id });
-  res.redirect("/read");
+//read
+
+app.get("/read", async (req, res) => {
+  let allUsers = await usermodel.find();
+  res.render("read", { users: allUsers });
 });
 
-app.get("/edit/:userid", async (req, res) => {
-  let user = await usermodel.findOne({ _id: req.params.userid });
-  res.render("edit", { user });
-});
+//update
 
 app.post("/update/:userid", async (req, res) => {
   let { name, email, image } = req.body;
@@ -48,6 +44,18 @@ app.post("/update/:userid", async (req, res) => {
     { new: true }
   );
   res.redirect("/read");
+});
+
+
+
+app.get("/delete/:id", async (req, res) => {
+  await usermodel.findOneAndDelete({ _id: req.params.id });
+  res.redirect("/read");
+});
+
+app.get("/edit/:userid", async (req, res) => {
+  let user = await usermodel.findOne({ _id: req.params.userid });
+  res.render("edit", { user });
 });
 
 const port = 3000;

@@ -16,9 +16,9 @@ jab hum browser sai server pai request karty hain to server kehta hain app kon h
 the event between login and logout.
 
 
-topic to cover next;
+topic to cover next;         
 1) cookies kaisy set karty hain & read karty hain
->npm i cookie-parser
+>npm i cookie-parser        
 
 app.get("/", (req, res) => {
   res.cookie("name", "raees"); //setting cookkies
